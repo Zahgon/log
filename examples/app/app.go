@@ -10,18 +10,9 @@ import (
 
 type cup int
 
-func (c cup) String() string {
-	s := fmt.Sprintf("%d cup", c)
-	if c > 1 {
-		s += "s"
-	}
-	return s
-}
+func (c cup) String() string { _ = "STUB: not implemented"; return "" }
 
-func startOven(degree int) {
-	log.Helper()
-	log.Debug("Starting oven", "temperature", degree)
-}
+func startOven(degree int) { _ = "STUB: not implemented"; return }
 
 func main() {
 	log.SetTimeFormat(time.Kitchen)

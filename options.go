@@ -1,7 +1,6 @@
 package log
 
 import (
-	"fmt"
 	"time"
 )
 
@@ -19,21 +18,25 @@ type TimeFunction = func(time.Time) time.Time
 //
 //	log.SetTimeFunction(log.NowUTC)
 func NowUTC(t time.Time) time.Time {
-	return t.UTC()
+	_ = "STUB: not implemented"
+
+	// CallerFormatter is the caller formatter.
+	return *new(time.Time)
 }
 
-// CallerFormatter is the caller formatter.
 type CallerFormatter func(string, int, string) string
 
 // ShortCallerFormatter is a caller formatter that returns the last 2 levels of the path
 // and line number.
 func ShortCallerFormatter(file string, line int, _ string) string {
-	return fmt.Sprintf("%s:%d", trimCallerPath(file, 2), line)
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // LongCallerFormatter is a caller formatter that returns the full path and line number.
 func LongCallerFormatter(file string, line int, _ string) string {
-	return fmt.Sprintf("%s:%d", file, line)
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // Options is the options for the logger.
